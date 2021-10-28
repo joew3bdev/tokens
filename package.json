@@ -1,6 +1,7 @@
 {
   "name": "react-slingshot",
   "version": "7.0.1",
+  "homepage": "http://joew3bdev.github.io/tokens",
   "description": "Starter kit for creating apps with React and Redux",
   "engines": {
     "node": ">=8",
@@ -8,6 +9,8 @@
   },
   "scripts": {
     "preinstall": "node tools/nodeVersionCheck.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "setup": "node tools/setup/setupMessage.js && npm install && node tools/setup/setup.js",
     "start-message": "babel-node tools/startMessage.js",
     "prestart": "npm run start-message",
@@ -35,6 +38,7 @@
     "antd": "^4.16.13",
     "axios": "^0.24.0",
     "connected-react-router": "6.7.0",
+    "gh-pages": "^3.2.3",
     "object-assign": "4.1.1",
     "react": "16.11.0",
     "react-dom": "16.11.0",
