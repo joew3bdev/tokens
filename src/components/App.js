@@ -1,12 +1,11 @@
 /* eslint-disable import/no-named-as-default */
 import { Route, Switch } from "react-router-dom";
-
-// import HomePage from "./NotFoundPage";
-import NotFoundPage from "./NotFoundPage";
+import "antd/dist/antd.css";
+import HomePage from "./NotFoundPage";
 import PropTypes from "prop-types";
 import React from "react";
 import { hot } from "react-hot-loader";
-
+import AuthContainer from "../Containers/index";
 // This is a class-based component because the current
 // version of hot reloading won't hot reload a stateless
 // component at the top-level.
@@ -16,8 +15,7 @@ class App extends React.Component {
     return (
       <div>
         <Switch>
-          {/* <Route exact path="/" component={HomePage} /> */}
-          <Route component={NotFoundPage} />
+          <Route exact path="/" component={AuthContainer(HomePage)} />
         </Switch>
       </div>
     );
@@ -25,7 +23,7 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-  children: PropTypes.element
+  children: PropTypes.element,
 };
 
 export default hot(module)(App);

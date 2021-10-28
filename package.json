@@ -32,6 +32,8 @@
   "license": "MIT",
   "dependencies": {
     "@hot-loader/react-dom": "16.10.2",
+    "antd": "^4.16.13",
+    "axios": "^0.24.0",
     "connected-react-router": "6.7.0",
     "object-assign": "4.1.1",
     "react": "16.11.0",
